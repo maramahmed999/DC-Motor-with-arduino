@@ -1,0 +1,19 @@
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(12, INPUT);
+}
+
+int switchState = 0;
+
+void loop()
+{
+  switchState = digitalRead(12);
+  
+  if (switchState == HIGH) {
+    digitalWrite(13, HIGH);
+  }
+  else {
+    digitalWrite(13, LOW);
+  }
+}
